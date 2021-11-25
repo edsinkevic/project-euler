@@ -3,7 +3,7 @@
 //Find the largest palindrome made from the product of two 3-digit numbers.
 
 object Main extends App {
-    val answer = (for {a <- 100 to 999; b <- 100 to 999} yield a * b).filter(isPalindrome).max
+    val answer = (for {a <- 100 to 999; b <- 100 to 999 if isPalindrome(a * b)} yield a * b).max
 
     def isPalindrome(x: Int) = x.toString.reverse == x.toString
 
