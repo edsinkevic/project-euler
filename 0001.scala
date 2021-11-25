@@ -4,6 +4,6 @@
 
 
 object Main extends App {
-    val answer = (1 until 1000).view.filter(x => x % 5 == 0 || x % 3 == 0).sum
+    val answer = (1 until 1000).filter(x => x % 5 == 0 || x % 3 == 0).sum
     println(answer)
 }
